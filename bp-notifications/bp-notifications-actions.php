@@ -1,7 +1,6 @@
 <?php
-
 /**
- * BuddyPress Notifications Actions
+ * BuddyPress Notifications Actions.
  *
  * Action functions are exactly the same as screen functions, however they do not
  * have a template screen associated with them. Usually they will send the user
@@ -11,13 +10,13 @@
  * @subpackage NotificationsActions
  */
 
-// Exit if accessed directly
+// Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
 /**
  * Handle marking single notifications as read.
  *
- * @since BuddyPress (1.9.0)
+ * @since 1.9.0
  *
  * @return bool
  */
@@ -53,7 +52,7 @@ add_action( 'bp_actions', 'bp_notifications_action_mark_read' );
 /**
  * Handle marking single notifications as unread.
  *
- * @since BuddyPress (1.9.0)
+ * @since 1.9.0
  *
  * @return bool
  */
@@ -89,7 +88,7 @@ add_action( 'bp_actions', 'bp_notifications_action_mark_unread' );
 /**
  * Handle deleting single notifications.
  *
- * @since BuddyPress (1.9.0)
+ * @since 1.9.0
  *
  * @return bool
  */
@@ -125,7 +124,7 @@ add_action( 'bp_actions', 'bp_notifications_action_delete' );
 /**
  * Handles bulk management (mark as read/unread, delete) of notifications.
  *
- * @since BuddyPress (2.2.0)
+ * @since 2.2.0
  *
  * @return bool
  */

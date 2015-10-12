@@ -1,5 +1,4 @@
 <?php
-
 /**
  * BuddyPress Notifications Admin Bar functions.
  *
@@ -9,13 +8,15 @@
  * @subpackage NotificationsToolbar
  */
 
-// Exit if accessed directly
+// Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
 /**
  * Build the "Notifications" dropdown.
  *
- * @since BuddyPress (1.9.0)
+ * @since 1.9.0
+ *
+ * @return bool
  */
 function bp_notifications_toolbar_menu() {
 	global $wp_admin_bar;

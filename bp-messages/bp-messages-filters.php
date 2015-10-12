@@ -1,5 +1,4 @@
 <?php
-
 /**
  * BuddyPress Messages Filters.
  *
@@ -9,7 +8,7 @@
  * @subpackage MessagesFilters
  */
 
-// Exit if accessed directly
+// Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
 add_filter( 'bp_get_message_notice_subject',        'wp_filter_kses', 1 );
@@ -57,19 +56,20 @@ add_filter( 'bp_get_the_thread_message_content', 'make_clickable', 9 );
 add_filter( 'bp_get_message_notice_text',        'wpautop' );
 add_filter( 'bp_get_the_thread_message_content', 'wpautop' );
 
-add_filter( 'bp_get_message_notice_subject',     'stripslashes_deep' );
-add_filter( 'bp_get_message_notice_text',        'stripslashes_deep' );
-add_filter( 'bp_get_message_thread_subject',     'stripslashes_deep' );
-add_filter( 'bp_get_message_thread_excerpt',     'stripslashes_deep' );
-add_filter( 'bp_get_messages_subject_value',     'stripslashes_deep' );
-add_filter( 'bp_get_messages_content_value',     'stripslashes_deep' );
-add_filter( 'bp_get_the_thread_message_content', 'stripslashes_deep' );
-add_filter( 'bp_get_the_thread_subject',         'stripslashes_deep' );
+add_filter( 'bp_get_message_notice_subject',          'stripslashes_deep' );
+add_filter( 'bp_get_message_notice_text',             'stripslashes_deep' );
+add_filter( 'bp_get_message_thread_subject',          'stripslashes_deep' );
+add_filter( 'bp_get_message_thread_excerpt',          'stripslashes_deep' );
+add_filter( 'bp_get_message_get_recipient_usernames', 'stripslashes_deep' );
+add_filter( 'bp_get_messages_subject_value',          'stripslashes_deep' );
+add_filter( 'bp_get_messages_content_value',          'stripslashes_deep' );
+add_filter( 'bp_get_the_thread_message_content',      'stripslashes_deep' );
+add_filter( 'bp_get_the_thread_subject',              'stripslashes_deep' );
 
 /**
  * Enforce limitations on viewing private message contents
  *
- * @since BuddyPress (2.3.2)
+ * @since 2.3.2
  *
  * @see bp_has_message_threads() for description of parameters
  *
